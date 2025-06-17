@@ -34,7 +34,7 @@ if ($('.typed-init').length && $('.typed').length) {
 
   new Typed('.typed-init', {
     strings: first_string,
-    typeSpeed: 250,
+    typeSpeed: 100,
     backSpeed: 50,
     backDelay: 1000,
     loop: false,
