@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta property="og:title" content="Talha Wazolski" />
+  <meta property="og:description" content="Let it happen." />
+  <meta property="og:image" content="https://i.hizliresim.com/rwc53ov.jpeg" />
+  <meta property="og:url" content="https://talha.is-best.net/" />
+  <meta property="og:type" content="website" />
+
+  <title>Talha</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <link href="https://i.hizliresim.com/7ynszlx.png" rel="icon">
+  <link href="https://i.hizliresim.com/7ynszlx.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* CV Kartları Tasarımı */
+    .cv-card {
+      background: #ffffff;
+      border-radius: 15px;
+      border: 1px solid transparent;
+      border-bottom: 4px solid #0563bb;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .cv-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(5, 99, 187, 0.15);
+      border-color: rgba(5, 99, 187, 0.3);
+      border-bottom: 4px solid #0563bb;
+    }
+    .cv-btn {
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: all 0.3s;
+      margin: 5px;
+    }
+    .cv-btn-primary {
+      background: #0563bb;
+      color: #fff !important;
+      box-shadow: 0 4px 6px rgba(5, 99, 187, 0.2);
+    }
+    .cv-btn-primary:hover {
+      background: #067ded;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(5, 99, 187, 0.3);
+    }
+    .cv-btn-outline {
+      border: 2px solid #0563bb;
+      color: #0563bb !important;
+      background: transparent;
+    }
+    .cv-btn-outline:hover {
+      background: #0563bb;
+      color: #fff !important;
+    }
+
+    /* === MOBİL CV BUTON DÜZELTMESİ === */
+    @media (max-width: 575px) {
+      .cv-card .mt-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .cv-btn {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+      }
+    }
+
+    /* Portfolio ve Manifesto Akıllı Masaüstü Izgarası (16:9 Oran) */
+    .portfolio-wrap {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+      display: block;
+      background: #f8f9fa;
+    }
+    .portfolio-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.4s ease;
+    }
+    .portfolio-wrap:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ABOUT KISMI ÖZEL TASARIMLARI */
+    .about-img-custom {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 5px solid #fff;
+    }
+    .about-img-custom:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(5, 99, 187, 0.2);
+    }
+    .about-list {
+      list-style: none;
+      padding: 0;
+    }
+    .about-list li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #444;
+    }
+    .about-list li i {
+      font-size: 24px;
+      color: #0563bb;
+      margin-right: 12px;
+      margin-top: 2px;
+    }
+
+    /* MANIFESTO YAZI BOYUTU DÜZELTMESİ */
+    #manifesto .portfolio-wrap .portfolio-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px 20px;
+    }
+    #manifesto .portfolio-wrap .portfolio-info h4 {
+      font-size: 14px !important;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* Tıklanabilir İletişim Kartları */
+    .contact-link {
+      text-decoration: none !important;
+      color: inherit !important;
+      transition: 0.3s;
+      display: block;
+    }
+    .contact-link:hover .bx {
+      background: #0563bb;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <header id="header" class="d-flex flex-column justify-content-center">
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#cv"><i class="bx bx-file-blank"></i> <span>CV</span></a></li>
+        <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        <li><a href="#manifesto"><i class="bx bx-bulb"></i> <span>Manifesto</span></a></li>
+        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>TALHA WAZOLSKI</h1>
+      <p><span class="typed-init" data-typed-items='["Wake up, Neo."]'></span></p>
+      <p id="second-line" style="display:none;"><span class="typed" data-typed-items="perfectionist, different, web developer, a people"></span></p>
+
+      <div class="social-links">
+        <a href="https://instagram.com/talhawtt" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/talhawt" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/kutsalmasa" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://t.me/ultrasIan" class="telegram"><i class="bx bxl-telegram"></i></a>
+        <a href="https://www.linkedin.com/in/talha-leblebici-9809b3363" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>"Her zaman; o anda yaşamı terk edecekmişsin gibi davranmalı, konuşmalı ve düşünmelisin."</p>
+          <p>- Marcus Aurelius</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/ok.jpg" class="img-fluid about-img-custom" alt="Talha Wazolski">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>Who Am I ¿</h3>
+            <div class="row mt-3">
+              <div class="col-lg-12">
+                <ul class="about-list">
+                  <li>
+                    <i class="bx bx-chevron-right-circle"></i> 
+                    <div><strong>Akademik Altyapı:</strong> İstanbul Gelişim Üniversitesi Bilgisayar Programcılığı bölümünden tam burslu olarak mezun oldum. Teknik becerilerimi stratejik yönetim vizyonuyla harmanlamak adına Anadolu Üniversitesi Yönetim Bilişim Sistemleri (MIS) bölümünde 3. sınıf öğrencisi olarak lisans eğitimime devam etmekteyim.</div>
+                  </li>
+                  <li>
+                    <i class="bx bx-chevron-right-circle"></i> 
+                    <div><strong>Teknik Uzmanlık:</strong> Lise yıllarımdan itibaren yazılım ekosisteminin içindeyim. PHP, SQL, Python ve C# gibi dillerde yetkinliğim bulunmakta olup, modern web uygulamaları ve veritabanı mimarileri üzerine yenilikçi projeler üretiyorum.</div>
+                  </li>
+                  <li>
+                    <i class="bx bx-chevron-right-circle"></i> 
+                    <div><strong>Odak Noktası:</strong> Geleneksel yazılım çözümlerini aşarak, Retrieval-Augmented Generation (RAG) destekli akıllı asistanlar ve Yapay Zeka (AI) otomasyon sistemleri geliştirerek iş süreçlerini optimize etmeye odaklanıyorum.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Curriculum Vitae (CV)</h2>
+          <p>Özgeçmişimi Türkçe ve İngilizce dillerinde inceleyebilir veya PDF formatında indirebilirsiniz.</p>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up">
+            <div class="w-100 p-5 text-center cv-card">
+              <div class="icon" style="font-size: 54px; color: #0563bb; margin-bottom: 20px;"><i class="bx bxs-file-pdf"></i></div>
+              <h4 class="title" style="font-weight: 600; color: #272829; margin-bottom: 25px;">Türkçe Özgeçmiş</h4>
+              <div class="mt-4">
+                <a href="assets/cv/cv-tr.pdf" target="_blank" class="cv-btn cv-btn-primary">Görüntüle</a>
+                <a href="assets/cv/cv-tr.pdf" download class="cv-btn cv-btn-outline">İndir</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-100 p-5 text-center cv-card">
+              <div class="icon" style="font-size: 54px; color: #0563bb; margin-bottom: 20px;"><i class="bx bxs-file-pdf"></i></div>
+              <h4 class="title" style="font-weight: 600; color: #272829; margin-bottom: 25px;">English Resume</h4>
+              <div class="mt-4">
+                <a href="assets/cv/cv-en.pdf" target="_blank" class="cv-btn cv-btn-primary">View</a>
+                <a href="assets/cv/cv-en.pdf" download class="cv-btn cv-btn-outline">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Üzerinde çalıştığım teknolojiler ve hayata geçirdiğim projeler.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Tümü</li>
+              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Uygulama</li>
+              <li data-filter=".filter-ai">Yapay Zeka</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=dijitalbankacilik">
+                <img src="assets/img/portfolio/dijitalbankacilik/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Dijital Bankacılık Sistemi</h4>
+                <p>PHP Tabanlı Web Uygulaması</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=dijitalbankacilik"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=ogrenciisleri">
+                <img src="assets/img/portfolio/ogrenciisleri/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Öğrenci İşleri Otomasyonu</h4>
+                <p>Kapsamlı Yönetim Sistemi</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=ogrenciisleri"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=yzasistan">
+                <img src="assets/img/portfolio/yzasistan/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Satış Sonrası YZ Asistanı</h4>
+                <p>RAG & Vektör DB Destekli Bot</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=yzasistan"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=randevuportali">
+                <img src="assets/img/portfolio/randevuportali/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Dijital Sağlık & Randevu Portalı</h4>
+                <p>Sağlık & Randevu Sistemi</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=randevuportali"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=clouddosya">
+                <img src="assets/img/portfolio/clouddosya/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Cloud Dosya Yönetim Sistemi</h4>
+                <p>Güvenli Depolama Altyapısı</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=clouddosya"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=digivideo">
+                <img src="assets/img/portfolio/digivideo/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Modern IPTV Oynatıcı</h4>
+                <p>Gelişmiş Medya Uygulaması</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=digivideo"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <a href="portfolio-details.html?id=berberrandevu">
+                <img src="assets/img/portfolio/berberrandevu/kapakfoto/kapak.jpeg" class="img-fluid" alt="">
+              </a>
+              <div class="portfolio-info">
+                <h4>Berber & Kuaför Randevu Sistemi</h4>
+                <p>Online Randevu Paneli</p>
+                <div class="portfolio-links"><a href="portfolio-details.html?id=berberrandevu"><i class="bx bx-link"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="manifesto" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Manifesto</h2>
+          <p>“Bazen beynimin nefes alabilmek üzere, yeterince geniş bir mekân bulmak için kafatasımı delmek istediğini düşünüyorum.”</p>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/talha1.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>"Sen mühimsin. Haykıracak nefesim kalmasa bile."</h4>
+                <div class="portfolio-links"><a href="assets/img/portfolio/talha1.jpeg" data-gall="portfolioGallery" class="venobox" title="Manifesto 1"><i class="bx bx-plus"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/talha2.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>"Vatan aşkıydı bizimkisi. Sevdalımıza koşmak yerine mitralyözün üzerine koştuk, atımız çatlarcasına."</h4>
+                <div class="portfolio-links"><a href="assets/img/portfolio/talha2.jpeg" data-gall="portfolioGallery" class="venobox" title="Manifesto 2"><i class="bx bx-plus"></i></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/talha3.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>∞</h4>
+                <div class="portfolio-links"><a href="assets/img/portfolio/talha3.jpeg" data-gall="portfolioGallery" class="venobox" title="Manifesto 3"><i class="bx bx-plus"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+        <div class="row mt-1">
+          <div class="col-lg-4">
+            <div class="info">
+              <a href="https://t.me/ultrasIan" target="_blank" class="contact-link">
+                <div class="address"><i class="bx bxl-telegram"></i><h4>Telegram</h4><p>@ultrasIan</p></div>
+              </a>
+              <a href="https://www.linkedin.com/in/talha-leblebici-9809b3363" target="_blank" class="contact-link">
+                <div class="email"><i class="bx bxl-linkedin"></i><h4>LinkedIn</h4><p>Talha Leblebici</p></div>
+              </a>
+              <a href="mailto:leblebici.bt@gmail.com" class="contact-link">
+                <div class="email"><i class="bx bx-envelope"></i><h4>Email</h4><p>leblebici.bt@gmail.com</p></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="#" method="post" class="php-email-form" onsubmit="sendMail(event)">
+              <div class="form-row">
+                <div class="col-md-6 form-group"><input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required /></div>
+                <div class="col-md-6 form-group"><input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required /></div>
+              </div>
+              <div class="form-group"><input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required /></div>
+              <div class="form-group"><textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea></div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <h3>TALHA WAZOLSKI</h3>
+      <hr>
+      <h8>"İnsan; bir akşamüstü ansızın yorulur."<br><a href="https://tr.wikipedia.org/wiki/Attil%C3%A2_%C4%B0lhan"> Attila İlhan</a></h8><br><br>
+      <div class="social-links">
+        <a href="https://instagram.com/talhawtt" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/talhawt" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/kutsalmasa" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://t.me/ultrasIan" class="telegram"><i class="bx bxl-telegram"></i></a>
+        <a href="https://www.linkedin.com/in/talha-leblebici-9809b3363" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <script>
+    function sendMail(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+      window.location.href = "mailto:leblebici.bt@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent("İsim: " + name + "\nE-posta: " + email + "\n\nMesaj:\n" + message);
+    }
+  </script>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

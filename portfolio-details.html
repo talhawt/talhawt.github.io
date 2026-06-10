@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title id="page-title">Proje Detayları - Talha Wazolski</title>
+
+  <link href="https://i.hizliresim.com/7ynszlx.png" rel="icon">
+  <link href="https://i.hizliresim.com/7ynszlx.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    // Resim yüklenemezse (örneğin 3. resim yoksa) sarmalayıcı linki (a etiketi) DOM'dan sil ve ızgarayı düzelt
+    function handleImgError(linkElement) {
+      linkElement.remove();
+      const container = document.getElementById('gallery-container');
+      if (container) {
+        const count = container.querySelectorAll('a').length;
+        container.className = 'gallery-container gallery-' + count;
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium Hero Başlangıç Alanı */
+    #hero.page-header-override {
+      height: 55vh !important;
+      min-height: 400px;
+      background: radial-gradient(circle at center, #0563bb 0%, #011429 100%) !important;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    #hero.page-header-override:before { background: rgba(0, 0, 0, 0.2); }
+    #hero.page-header-override .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding-top: 30px;
+    }
+    #hero.page-header-override h2 {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    #hero.page-header-override p {
+      color: rgba(255,255,255,0.85);
+      font-size: 18px;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    #hero.page-header-override .back-btn {
+      display: inline-block;
+      margin-top: 35px;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(5px);
+    }
+    #hero.page-header-override .back-btn:hover {
+      background: #fff;
+      color: #0563bb;
+      border-color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+    }
+    @media (max-width: 768px) {
+      #hero.page-header-override h2 { font-size: 32px; }
+      #hero.page-header-override p { font-size: 15px; }
+    }
+
+    /* Akıllı Dinamik Izgara (Grid) Sistemi */
+    .gallery-container {
+      display: grid;
+      gap: 25px;
+    }
+    
+    .gallery-link {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .gallery-link:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 40px rgba(5, 99, 187, 0.2);
+      z-index: 10;
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .gallery-3 { grid-template-columns: 1fr 1fr; }
+    .gallery-3 .gallery-link:nth-child(1) {
+      grid-column: 1 / -1;
+      height: 450px;
+    }
+    .gallery-3 .gallery-link:nth-child(2),
+    .gallery-3 .gallery-link:nth-child(3) { height: 280px; }
+
+    .gallery-2 { grid-template-columns: 1fr 1fr; }
+    .gallery-2 .gallery-link { height: 380px; }
+
+    .gallery-1 { grid-template-columns: 1fr; }
+    .gallery-1 .gallery-link { height: 500px; }
+
+    @media (max-width: 768px) {
+      .gallery-3, .gallery-2, .gallery-1 { grid-template-columns: 1fr; gap: 15px; }
+      .gallery-3 .gallery-link:nth-child(1),
+      .gallery-3 .gallery-link:nth-child(2),
+      .gallery-3 .gallery-link:nth-child(3),
+      .gallery-2 .gallery-link,
+      .gallery-1 .gallery-link { height: 250px; }
+    }
+
+    .portfolio-info {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border-top: 5px solid #0563bb;
+      position: sticky;
+      top: 30px;
+    }
+    .portfolio-info h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #f0f0f0;
+      color: #272829;
+    }
+    .portfolio-info ul { list-style: none; padding: 0; font-size: 15px; color: #444; }
+    .portfolio-info ul li { margin-bottom: 18px; display: flex; align-items: center; }
+    .portfolio-info ul li i { font-size: 22px; color: #0563bb; margin-right: 12px; }
+    .portfolio-info p { margin-top: 30px; font-size: 15px; color: #555; line-height: 1.8; }
+    
+    .visit-btn {
+      display: block;
+      text-align: center;
+      background: #0563bb;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50px;
+      margin-top: 35px;
+      font-weight: 600;
+      transition: all 0.3s;
+      text-decoration: none !important;
+      font-size: 16px;
+    }
+    .visit-btn:hover {
+      background: #067ded;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(5, 99, 187, 0.3);
+    }
+  </style>
+</head>
+
+<body style="background: #f8f9fa;">
+
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <header id="header" class="d-flex flex-column justify-content-center">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bx bx-home"></i> <span>Ana Sayfa</span></a></li>
+        <li class="active"><a href="index.html#portfolio"><i class="bx bx-left-arrow-alt"></i> <span>Portfolyoya Dön</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="page-header-override">
+    <div class="container" data-aos="zoom-in">
+      <h2 id="header-title">Proje Yükleniyor...</h2>
+      <p id="header-category">Kategori Bekleniyor</p>
+      <a href="index.html#portfolio" class="back-btn"><i class="bx bx-left-arrow-alt"></i> Tüm Projeler</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details" style="padding-top: 60px; padding-bottom: 80px;">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <div id="gallery-container" class="gallery-container gallery-3">
+              <a id="link1" href="" class="venobox gallery-link" data-gall="portfolioGallery">
+                <img id="img1" src="" class="gallery-img" alt="Proje Görseli 1" onerror="handleImgError(this.parentElement)">
+              </a>
+              <a id="link2" href="" class="venobox gallery-link" data-gall="portfolioGallery">
+                <img id="img2" src="" class="gallery-img" alt="Proje Görseli 2" onerror="handleImgError(this.parentElement)">
+              </a>
+              <a id="link3" href="" class="venobox gallery-link" data-gall="portfolioGallery">
+                <img id="img3" src="" class="gallery-img" alt="Proje Görseli 3" onerror="handleImgError(this.parentElement)">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Proje Özeti</h3>
+              <ul>
+                <li><i class="bx bx-category"></i> <strong>Alan:</strong> <span id="project-category" style="margin-left: 5px;"></span></li>
+                <li><i class="bx bx-code-alt"></i> <strong>Teknoloji:</strong> <span id="project-tech" style="margin-left: 5px;"></span></li>
+                <li><i class="bx bx-calendar"></i> <strong>Tarih:</strong> <span id="project-date" style="margin-left: 5px;"></span></li>
+              </ul>
+              <p id="project-desc"></p>
+              <a href="index.html#contact" class="visit-btn"><i class="bx bx-envelope"></i> Proje İçin İletişime Geç</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <script>
+    const projectsData = {
+      "dijitalbankacilik": {
+        title: "Dijital Bankacılık Sistemi",
+        category: "Web Uygulaması",
+        tech: "PHP, SQL, HTML/CSS",
+        date: "Ocak 2024",
+        desc: "Güvenli ve hızlı işlem yapılabilmesi için tasarlanmış kapsamlı bir dijital bankacılık simülasyonu. Kullanıcı bakiye yönetimi, hesaplar arası para transferleri ve detaylı hesap hareketleri gibi temel finansal operasyonları barındırır. Modern arayüzü sayesinde kullanıcı deneyimini üst düzeye çıkarır."
+      },
+      "ogrenciisleri": {
+        title: "Öğrenci İşleri Otomasyonu",
+        category: "Yönetim Sistemi",
+        tech: "PHP, Veritabanı Yönetimi",
+        date: "Mart 2024",
+        desc: "Okul yönetim süreçlerini dijitalleştiren ve hızlandıran kapsamlı öğrenci yönetim sistemi. Ders kayıtları, sınav notu girişleri, akademisyen atamaları ve öğrenci devamsızlık takibi gibi modülleri yönetmeyi sağlar."
+      },
+      "yzasistan": {
+        title: "Satış Sonrası YZ Asistanı",
+        category: "Yapay Zeka",
+        tech: "RAG, Vektör DB, Python",
+        date: "Eylül 2025",
+        desc: "Satış sonrası destek süreçlerini otomatize eden akıllı asistan. RAG mimarisi ve vektör veritabanı altyapısıyla çalışır. Şirket dökümanlarını saniyeler içinde analiz ederek müşterilere insan doğallığında doğru teknik yanıtlar üretir."
+      },
+      "randevuportali": {
+        title: "Dijital Sağlık & Randevu Portalı",
+        category: "Web Geliştirme",
+        tech: "Web Teknolojileri, API",
+        date: "Ekim 2025",
+        desc: "Sağlık sistemlerine alternatif hasta-doktor platformu. Kullanıcılar randevu alabilir, laboratuvar sonuçlarını inceleyebilir ve anlık lokasyon bazlı nöbetçi eczane sorgulaması yapabilirler."
+      },
+      "clouddosya": {
+        title: "Cloud Dosya Yönetim Sistemi",
+        category: "Web Geliştirme",
+        tech: "Sunucu Yönetimi, PHP",
+        date: "Kasım 2025",
+        desc: "Kişisel ve kurumsal kullanıcılar için güvenli bulut tabanlı depolama altyapısı. Şifrelenmiş veri aktarımı ve yetki bazlı dosya paylaşımı özellikleriyle dosyalarınıza her yerden erişim imkanı tanır."
+      },
+      "digivideo": {
+        title: "Modern IPTV Oynatıcı",
+        category: "Uygulama Geliştirme",
+        tech: "M3U Parser, Video JS",
+        date: "Şubat 2026",
+        desc: "Gelişmiş medya akış teknolojileriyle oluşturulan IPTV oynatıcı. M3u çalma listelerini ayrıştırıp kategorize eder. Canlı yayınları ve filmleri kesintisiz bir deneyimle sunar."
+      },
+      "berberrandevu": {
+        title: "Berber & Kuaför Randevu Sistemi",
+        category: "Web Geliştirme",
+        tech: "Web Teknolojileri, JS",
+        date: "Mart 2026",
+        desc: "Kuaförler için tasarlanmış online randevu ve müşteri takip paneli. Müşteriler favori çalışanlarını seçerek randevu alabilir. İşletme sahibi gelirini özel dashboard üzerinden takip edebilir."
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+
+    if (projectId && projectsData[projectId]) {
+      const data = projectsData[projectId];
+      
+      document.getElementById('page-title').innerText = data.title + " - Talha Wazolski";
+      document.getElementById('header-title').innerText = data.title;
+      document.getElementById('header-category').innerText = data.category;
+      document.getElementById('project-category').innerText = data.category;
+      document.getElementById('project-tech').innerText = data.tech;
+      document.getElementById('project-date').innerText = data.date;
+      document.getElementById('project-desc').innerText = data.desc;
+
+      const path1 = `assets/img/portfolio/${projectId}/portfolio1.jpeg`;
+      const path2 = `assets/img/portfolio/${projectId}/portfolio2.jpeg`;
+      const path3 = `assets/img/portfolio/${projectId}/portfolio3.jpeg`;
+
+      document.getElementById('img1').src = path1;
+      document.getElementById('link1').href = path1;
+      document.getElementById('img2').src = path2;
+      document.getElementById('link2').href = path2;
+      document.getElementById('img3').src = path3;
+      document.getElementById('link3').href = path3;
+      
+    } else {
+      document.getElementById('header-title').innerText = "Proje Bulunamadı!";
+      document.getElementById('header-category').innerText = "Hata";
+      document.getElementById('project-desc').innerText = "Geçerli bir proje bulunamadı. Lütfen ana sayfaya dönün.";
+      document.getElementById('gallery-container').style.display = "none";
+    }
+  </script>
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.venobox').venobox({
+          framewidth: '80%',
+          frameheight: 'auto',
+          border: '0',
+          bgcolor: '#011429',
+          numeratio: true,
+          infinigall: true
+        });
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
